@@ -51,8 +51,8 @@ macro(AutoBuild_use_package_NanoGUI YOUR_TARGET INTERFACE_PUBLIC_OR_PRIVATE)
                 file(INSTALL ${AUTOBUILD_DOWNLOAD_DIR}/NanoGUI/src/ext/glad/include/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 
                 # And, the don't even install the .dll on Windows!  Come on nanogui guys, get your act together!
-                file(INSTALL ${CMAKE_BINARY_DIR}/external/NanoGUI/Release/nanogui.dll DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
-                file(INSTALL ${CMAKE_BINARY_DIR}/external/NanoGUI/Debug/nanoguid.dll DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+                file(INSTALL ${CMAKE_BINARY_DIR}/external/NanoGUI/libnanogui.dll DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+           # not needed     file(INSTALL ${CMAKE_BINARY_DIR}/external/NanoGUI/Debug/nanoguid.dll DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
             endif()
 
 
