@@ -352,6 +352,7 @@ bool GraphicsApp::scroll_glfw_cb(double x, double y) {
         return true;
     }
     else {
+    	mouse_scroll(Point2(x,y));
         // TODO: could add another virtual function to GraphicsApp to
         // respond to this if needed
     }

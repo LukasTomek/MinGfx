@@ -206,6 +206,8 @@ public:
     /// \copydoc GraphicsApp::OnLeftMouseUp(const Point2 &pos)
     virtual void OnRightMouseUp(const Point2 &pos) {}
 
+    /// \copydoc GraphicsApp::MouseScroll(const Point2 &pos)
+    virtual void MouseScroll(const Point2 &pos) {}
     
     /** Transforms a keyboard down event into the actual character typed.
      \param c The character for the key that was pressed.
@@ -432,6 +434,9 @@ private:
     }
     virtual void right_mouse_up(const Point2 &pos) {
         OnRightMouseUp(pos);
+    }
+    virtual void mouse_scroll(const Point2 &pos) {
+    	MouseScroll(pos);
     }
     virtual void key_down(const char *c, int modifiers) {
         OnKeyDown(c, modifiers);
